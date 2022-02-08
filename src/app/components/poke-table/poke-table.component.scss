@@ -7,9 +7,7 @@
     margin-bottom: 0;
     text-align: center;
     align-items: center;
-    margin-left: 10px;
-    // margin: 0 auto; //Centrar
-    
+    margin-left: 10px;  
 }
 
 
@@ -18,7 +16,6 @@
     min-width: 80%;
     height: 50%;
     text-align: center;
-    // margin: 0 auto;
     
 }
 
@@ -42,7 +39,6 @@ html, body {
 }
 
 //Stacks 
-
 .container2{
     float: right;
     width: 40%;
@@ -85,12 +81,17 @@ html, body {
 }
 
 .mat-card{
-    background-color: rgb(255, 232, 241);
+    background-color: rgb(255, 244, 161);
     margin-top: 10px;
     margin: auto;
- 
- 
+    background-image: url("../../../assets/images/pokeFond.png");
+    background-repeat: no-repeat;
+    background-size:60%;
+    background-position: center;
 
+    
+
+    
 }
 
 .mat-card-header{

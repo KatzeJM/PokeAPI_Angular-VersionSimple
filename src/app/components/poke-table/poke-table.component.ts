@@ -4,7 +4,7 @@ import { MatTableDataSource } from '@angular/material/table';
 import { ApiService } from 'src/app/services/api.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { MatDialog } from '@angular/material/dialog';
-import {PokeStacksComponent} from '../poke-stacks/poke-stacks.component'
+
 
 
 @Component({
@@ -20,17 +20,13 @@ export class PokeTableComponent implements OnInit {
   dataSource = new MatTableDataSource<any>(this.data);
   //Paginacion
   @ViewChild(MatPaginator, { static: true }) paginator!: MatPaginator; // paginator(!)como un sufijo al nombre de la variable.
-  
     pokemon : any ='';
     pokeType=[];
     pokeMoves=[];
     pokeImg = '';
 
- 
-
-
-  
-  constructor(private ApiService: ApiService, private router: Router, private dialogRef:MatDialog, private pokemonService:ApiService, private activateRouter:ActivatedRoute) { 
+   
+  constructor(private ApiService: ApiService, private router: Router, private dialogRef:MatDialog, private activateRouter:ActivatedRoute) { 
 
     this.activateRouter.params.subscribe(
       params =>{
@@ -41,8 +37,6 @@ export class PokeTableComponent implements OnInit {
     );
     
   }
-
-  
   
   
   ngOnInit(): void {
@@ -81,15 +75,9 @@ export class PokeTableComponent implements OnInit {
         }
       );
     } 
-
-      
     
   }
 
-
-
- 
-  
 
  //Obtiene elemento seleccionado
  getRow(row:any){
@@ -124,22 +112,6 @@ export class PokeTableComponent implements OnInit {
 }
 
 
-
-openDialog(){
-  this.dialogRef.open(PokeStacksComponent,{
-    data : {
-      pokeName :this.pokemon.name,
-      pokeId :this.pokemon.id,
-      pokeType:  this.pokeType,
-      pokeMoves:  this.pokeMoves,
-      pokeH :this.pokemon.height,
-      pokeW :this.pokemon.weight,
-      pokeImg:  this.pokeImg
-    }
-  })
-
-  
-}
 
 }
 

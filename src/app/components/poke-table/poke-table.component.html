@@ -1,6 +1,4 @@
 <div class="container">
-
-
   <mat-form-field>
     <mat-label>PokeFiltro:</mat-label>
     <input matInput (keyup)="applyFilter($event)" #input>
@@ -28,32 +26,20 @@
         <mat-cell *matCellDef="let row"> 
             <img src="{{row.image}}" alt="" width="100" height="100">    
         </mat-cell>
-      </ng-container>
-
-    
-  
+      </ng-container> 
       <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
         <mat-row *matRowDef="let row; columns: displayedColumns;"   (click)="getRow(row)"  >
       </mat-row>
-    </mat-table>
-  
-   
-  </div>
-
-
-
-    
+    </mat-table> 
+  </div> 
 </div>
 
 
 
 
 <div  class="container2">    <!-- Cards with media area -->
-   
-
-
-
   <mat-card class=" mat-dialog-container" >
+  
     <mat-card-header>
       <img mat-card-avatar class="header-i" src="../../../assets/images/pokeboll.png">
       <mat-card-title>{{pokemon.name}}</mat-card-title>
