@@ -13,3 +13,4 @@ Proyecto - Consumir  el API de pokemon (POKE API)
 
 
 **Proyecto**
+Version del proyecto sin Modal. 
